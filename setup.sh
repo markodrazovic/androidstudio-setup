@@ -9,7 +9,7 @@ echo -n "setup: make dir for insalling..."
 mkdir /opt/android-studio
 echo "done"
 echo -n "setup: copying files..."
-cp $pwd/android-studio/* /opt/android-studio
+cp -r ./android-studio/* /opt/android-studio
 echo "done"
 echo -n "setup: linking to run on path..."
 ln -s /opt/android-studio/bin/studio.sh /bin/android-studio
