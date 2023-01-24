@@ -1,19 +1,20 @@
 #!/bin/sh
 # Marko gaming install free android phone script in arch linux
 # its licesed on the gpl v3
-if [ $(whoami) != "root" ]
+if [ $(whoami) != "root" ]; then
   echo "setup: you need to run as root"
+  exit 1
 fi
-echo -n "make dir for insalling..."
+echo -n "setup: make dir for insalling..."
 mkdir /opt/android-studio
 echo "done"
-echo -n "copying files..."
+echo -n "setup: copying files..."
 cp $pwd/android-studio/* /opt/android-studio
 echo "done"
-echo -n "linking to run on path..."
+echo -n "setup: linking to run on path..."
 ln -s /opt/android-studio/bin/studio.sh /bin/android-studio
 echo "done"
-echo -n "making desktop shortcut..."
+echo -n "setup: making desktop shortcut..."
 cat > /usr/share/applications/android-studio.desktop << EOF
 [Desktop Entry]
 Name=Android Studio
