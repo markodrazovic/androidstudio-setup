@@ -7,7 +7,9 @@ make a folder (name whatever) and extract the root folder in the zip to the crea
 its like this:
 
 foldername
+
 -> setup.sh
+
 -> android-studio
 
 then execute the setup.sh script and it will install
